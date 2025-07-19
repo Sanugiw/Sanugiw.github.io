@@ -1,33 +1,33 @@
-# 🌐 Sanugi Wickramasinghe | Personal Portfolio Website
+# 🌐 Sanugi Wickramasinghe | Portfolio Website
 
-This repository contains the source code for my personal portfolio website, showcasing my academic background, notable projects, technical skills, and contact information. The site is designed to serve as a digital resume and professional portfolio, hosted via **GitHub Pages**.
+This repository contains the source code for my personal portfolio website, showcasing my academic journey, technical expertise, projects, social engagements, and achievements. Designed with a clean and modern card-based UI, the portfolio highlights my work as a Biomedical Engineering undergraduate.
 
 ---
 
 ## ✨ Features
 
-- **Clean, responsive design** with a modern layout.
-- **About Me Section** – Highlights my academic journey and interests in biomedical engineering, machine learning, and physiological modeling.
-- **Projects Showcase** – Lists my key projects like **X-Hale**, **ML-Integrated Fundoscope**, **MediBox**, **Dual-Mode Thermometer**, and more.
-- **Skills Overview** – Displays programming languages, frameworks, and tools I’ve mastered.
-- **Contact Section** – Quick access to my email, GitHub, and LinkedIn profiles.
-- **Easy Customization** – Written in pure HTML and CSS for simplicity and adaptability.
+- **About Section** – Overview of my background, research interests, and career goals.
+- **Projects Showcase** – Detailed cards for key projects like **X-Hale**, **ML-Integrated Fundoscope**, **MediBox**, **Dual-Mode Thermometer**, and more.
+- **Skills & Tools** – A concise display of programming languages, design software, and frameworks I use.
+- **Social Engagements** – Highlights my contributions to IEEE EMBS, AIESEC, and other organizations.
+- **Honors & Awards** – Dean’s List placements, leadership recognitions, and other accolades.
+- **Contact Section** – Easy access to my email, GitHub, and LinkedIn.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5** – Page structure
-- **CSS3** – Styling and responsive design
+- **HTML5** – Structural layout
+- **CSS3** – Modern dark theme styling
+- **JavaScript** – Interactive elements (scroll navigation, back-to-top button)
 - **GitHub Pages** – Hosting
 
 ---
 
 ## 🚀 Deployment
 
-This website is deployed using **GitHub Pages**.  
-To view it live, visit:  
-**[https://Sanugiw.github.io](https://Sanugiw.github.io)**
+The website is deployed on **GitHub Pages**. Visit it here:  
+[https://Sanugiw.github.io](https://Sanugiw.github.io)
 
 ---
 
@@ -35,7 +35,21 @@ To view it live, visit:
 
 ```plaintext
 .
-├── index.html         # Main HTML file
-├── images/            # Project or profile images
-├── README.md          # Documentation
+├── index.html          # Main portfolio file
+├── images/             # Project and profile images
+├── README.md           # Documentation
 └── (Optional CSS/JS files)
+```
+
+---
+
+## 📬 Contact
+
+- **Email:** [sanugidwickramasinghe@gmail.com](mailto:sanugidwickramasinghe@gmail.com)  
+- **LinkedIn:** [linkedin.com/in/sanugiwickramasinghe](https://linkedin.com/in/sanugiwickramasinghe)  
+- **GitHub:** [github.com/Sanugiw](https://github.com/Sanugiw)
+
+---
+
+> _“The benefits of biomedical progress are obvious, clear, and powerful. The hazards are much less well appreciated.”_  
+> — **Leon Kass**
