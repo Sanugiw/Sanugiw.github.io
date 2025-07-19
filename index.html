@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanugi Dilara Wickramasinghe | Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-        header { background: #004080; color: white; text-align: center; padding: 30px 0; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { font-size: 1.2rem; }
-        nav { background: #003366; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 1rem; }
-        section { max-width: 900px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h2 { color: #004080; border-bottom: 2px solid #004080; padding-bottom: 8px; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 8px 0; }
-        footer { text-align: center; background: #003366; color: white; padding: 15px; margin-top: 30px; }
-        .contact a { color: #004080; text-decoration: none; }
-        .project a { color: #007acc; text-decoration: none; }
+        :root {
+            --primary: #004080;
+            --secondary: #007acc;
+            --bg: #f5f7fa;
+            --text: #333;
+            --card-bg: #fff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: linear-gradient(to right, var(--primary), var(--secondary)); color: white; text-align: center; padding: 50px 20px; }
+        header h1 { font-size: 2.8rem; }
+        header p { font-size: 1.3rem; margin-top: 8px; }
+        nav { background: var(--primary); padding: 12px; text-align: center; position: sticky; top: 0; z-index: 100; }
+        nav a { color: white; text-decoration: none; margin: 0 18px; font-size: 1rem; transition: color 0.3s ease; }
+        nav a:hover { color: #ffd700; }
+        section { max-width: 1000px; margin: 40px auto; padding: 20px; background: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 8px var(--shadow); }
+        h2 { color: var(--primary); margin-bottom: 15px; border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; }
+        ul { list-style: none; padding-left: 0; }
+        ul li { padding: 6px 0; }
+        .project a { color: var(--secondary); text-decoration: none; font-weight: bold; }
+        .project a:hover { text-decoration: underline; }
+        .skills span { display: inline-block; margin: 5px; padding: 6px 12px; background: #eaf1f9; border-radius: 5px; font-size: 0.9rem; }
+        footer { text-align: center; background: var(--primary); color: white; padding: 15px; margin-top: 40px; }
+        footer a { color: #ffd700; text-decoration: none; }
+        .contact p a { color: var(--secondary); }
+        .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px var(--shadow); }
     </style>
 </head>
 <body>
@@ -35,41 +51,53 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<section id="about" class="card">
     <h2>About Me</h2>
-    <p>I am a third-year Biomedical Engineering undergraduate at the University of Moratuwa, passionate about 
-    Physiological Modeling, Bio-Signal Processing, and Machine Learning. My focus is on creating innovative healthcare 
-    solutions through interdisciplinary approaches that combine hardware integration, algorithm development, and user-centered design.</p>
+    <p>I am a third-year Biomedical Engineering undergraduate at the Department of Electronic and Telecommunication Engineering, University of Moratuwa. I am passionate about solving complex healthcare challenges using interdisciplinary approaches that combine <strong>Mathematics</strong>, <strong>Physiological Modeling</strong>, <strong>Biosignal Processing</strong>, and <strong>Machine Learning</strong>. My academic journey is defined by hands-on experience in developing medical devices and intelligent systems that enhance diagnostic precision and clinical efficiency. I am actively involved in technical and leadership roles in <strong>IEEE EMBS</strong>, <strong>Electronic Club</strong>, and <strong>AIESEC</strong>, which have strengthened my project management, communication, and collaboration skills.</p>
 </section>
 
-<section id="education">
+<section id="education" class="card">
     <h2>Education</h2>
     <ul>
-        <li><strong>B.Sc. Engineering (Hons) in Biomedical Engineering</strong> - University of Moratuwa (CGPA: 3.9/4.0)</li>
-        <li><strong>Advanced Level</strong> - Sujatha Vidyalaya, Matara (District 8th, Island 83rd)</li>
+        <li><strong>B.Sc. Engineering (Hons) in Biomedical Engineering</strong> – University of Moratuwa (CGPA: 3.9/4.0), Dean’s List for Semesters 1, 2, 3.</li>
+        <li><strong>Advanced Level</strong> – Sujatha Vidyalaya, Matara (3 A’s in Combined Mathematics, Physics, and Chemistry, District Rank: 8th).</li>
     </ul>
 </section>
 
-<section id="projects">
+<section id="projects" class="card">
     <h2>Projects</h2>
     <ul>
-        <li class="project"><strong><a href="https://github.com/Sanugiw/X-Hale">X-Hale</a></strong> – Smart portable spirometer with on-device FVC/FEV1 computation and mobile app integration.</li>
-        <li class="project"><strong><a href="https://github.com/Sanugiw/Table-Mounted-Funduscope">ML-Integrated Fundoscope</a></strong> – Retinal imaging system integrated with ML for diabetic retinopathy detection.</li>
-        <li class="project"><strong><a href="https://github.com/Sanugiw/Medi-Box">MediBox</a></strong> – IoT-based smart medicine reminder with environmental monitoring.</li>
-        <li class="project"><strong><a href="https://github.com/Sanugiw/Dual-Mode-Thermometer">Dual-Mode Analog Thermometer</a></strong> – Dual-mode thermometer for body and liquid measurements using analog circuits.</li>
-        <li class="project"><strong><a href="https://github.com/Sanugiw/Trash-Classifier">Smart Trash Classifier</a></strong> – Edge-AI waste classifier using Raspberry Pi and TensorFlow Lite.</li>
+        <li class="project"><a href="#">X-Hale</a> – Smart portable spirometer with FEV1/FVC computation and mobile app integration for respiratory health tracking.</li>
+        <li class="project"><a href="#">ML-Integrated Fundoscope</a> – Table-mounted retinal imaging device with AI-driven diabetic retinopathy detection.</li>
+        <li class="project"><a href="#">MediBox</a> – IoT-enabled medicine reminder with environmental monitoring and alerts.</li>
+        <li class="project"><a href="#">Dual-Mode Analog Thermometer</a> – High-precision thermometer for body and liquid temperature measurement using analog circuits.</li>
+        <li class="project"><a href="#">Smart Trash Classifier</a> – Raspberry Pi-based waste classifier using TensorFlow Lite and real-time dashboard.</li>
+        <li class="project"><a href="#">UART Transceiver for FPGA</a> – Verilog-based UART transceiver enabling reliable FPGA data communication.</li>
+        <li class="project"><a href="#">Handheld HF RFID Reader</a> – Ongoing design of a portable RFID reader with wireless data sync and app integration.</li>
     </ul>
 </section>
 
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> Python, C++, Dart, MATLAB, Verilog HDL</p>
-    <p><strong>Frameworks:</strong> TensorFlow, NumPy, Flutter</p>
-    <p><strong>Software:</strong> SolidWorks, Altium Designer, LT Spice, Proteus, Quartus</p>
-    <p><strong>Other Tools:</strong> Git, GitHub, LaTeX</p>
+<section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>C++</span>
+        <span>Dart</span>
+        <span>MATLAB</span>
+        <span>TensorFlow</span>
+        <span>NumPy</span>
+        <span>Flutter</span>
+        <span>SolidWorks</span>
+        <span>Altium Designer</span>
+        <span>LT Spice</span>
+        <span>Proteus</span>
+        <span>Quartus</span>
+        <span>Git & GitHub</span>
+        <span>LaTeX</span>
+    </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="card contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:sanugidwickramasinghe@gmail.com">sanugidwickramasinghe@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/sanugiwickramasinghe">linkedin.com/in/sanugiwickramasinghe</a></p>
