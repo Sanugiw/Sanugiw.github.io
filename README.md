@@ -15,7 +15,7 @@ This repository contains the source code for my personal portfolio website, show
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **HTML5** – Structural layout
 - **CSS3** – Modern dark theme styling
