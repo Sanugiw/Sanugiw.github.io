@@ -49,7 +49,3 @@ The website is deployed on **GitHub Pages**. Visit it here:
 - **LinkedIn:** [linkedin.com/in/sanugiwickramasinghe](https://linkedin.com/in/sanugiwickramasinghe)  
 - **GitHub:** [github.com/Sanugiw](https://github.com/Sanugiw)
 
----
-
-> _“The benefits of biomedical progress are obvious, clear, and powerful. The hazards are much less well appreciated.”_  
-> — **Leon Kass**
