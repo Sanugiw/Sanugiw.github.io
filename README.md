@@ -1,10 +1,10 @@
-# 🌐 Sanugi Wickramasinghe | Portfolio Website
+# Sanugi Wickramasinghe | Portfolio Website
 
 This repository contains the source code for my personal portfolio website, showcasing my academic journey, technical expertise, projects, social engagements, and achievements. Designed with a clean and modern card-based UI, the portfolio highlights my work as a Biomedical Engineering undergraduate.
 
 ---
 
-## ✨ Features
+## Features
 
 - **About Section** – Overview of my background, research interests, and career goals.
 - **Projects Showcase** – Detailed cards for key projects like **X-Hale**, **ML-Integrated Fundoscope**, **MediBox**, **Dual-Mode Thermometer**, and more.
@@ -15,7 +15,7 @@ This repository contains the source code for my personal portfolio website, show
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 - **HTML5** – Structural layout
 - **CSS3** – Modern dark theme styling
@@ -24,14 +24,14 @@ This repository contains the source code for my personal portfolio website, show
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 The website is deployed on **GitHub Pages**. Visit it here:  
 [https://Sanugiw.github.io](https://Sanugiw.github.io)
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```plaintext
 .
@@ -43,7 +43,7 @@ The website is deployed on **GitHub Pages**. Visit it here:
 
 ---
 
-## 📬 Contact
+## Contact
 
 - **Email:** [sanugidwickramasinghe@gmail.com](mailto:sanugidwickramasinghe@gmail.com)  
 - **LinkedIn:** [linkedin.com/in/sanugiwickramasinghe](https://linkedin.com/in/sanugiwickramasinghe)  
