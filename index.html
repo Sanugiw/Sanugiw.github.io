@@ -10,96 +10,160 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-alt: #1e293b;
-      --bg-soft: #243554;
+      --bg: #0a0f1c;
+      --bg-alt: #151c2f;
+      --card: #1e293b;
       --text: #e2e8f0;
       --text-dim: #94a3b8;
       --primary: #3b82f6;
-      --primary-accent: #60a5fa;
-      --accent-gradient: linear-gradient(135deg,#2563eb,#3b82f6,#60a5fa);
-      --radius-sm: 6px;
+      --primary-light: #60a5fa;
+      --accent: #22d3ee;
+      --gradient: linear-gradient(135deg, #2563eb, #3b82f6, #06b6d4);
       --radius: 14px;
-      --shadow: 0 4px 12px -2px rgba(0,0,0,.45),0 2px 4px -1px rgba(0,0,0,.4);
+      --shadow: 0 6px 18px -4px rgba(0,0,0,.6), 0 4px 6px -2px rgba(0,0,0,.5);
       --max-width: 1180px;
-      --focus: 0 0 0 3px rgba(96,165,250,.5);
-      --warning: #f59e0b;
-      --success: #10b981;
-      --danger: #ef4444;
-      --gradient-soft: radial-gradient(circle at 25% 20%,rgba(59,130,246,.15),transparent 60%),radial-gradient(circle at 80% 70%,rgba(14,165,233,.18),transparent 65%);
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
     html { scroll-behavior: smooth; }
-    body { margin:0; font-family: 'Inter', system-ui, Arial, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; background-image: var(--gradient-soft); }
-    a { color: var(--primary-accent); text-decoration: none; }
-    a:hover { color: #93c5fd; }
+    body {
+      font-family: 'Inter', system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      background-image: radial-gradient(circle at 25% 20%, rgba(59,130,246,.12), transparent 60%),
+                        radial-gradient(circle at 80% 70%, rgba(14,165,233,.1), transparent 65%);
+      min-height: 100vh;
+    }
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* Header */
     header {
-      padding: clamp(2.5rem,5vw,5rem) 1.5rem 3rem;
       text-align: center;
+      padding: 5rem 1rem 4rem;
       position: relative;
       overflow: hidden;
     }
-    header:before, header:after {
-      content:""; position:absolute; width:480px; height:480px; border-radius:50%; filter: blur(120px); opacity:.35; z-index:-1;
+    header h1 {
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      color: transparent;
     }
-    header:before { background:#1d4ed8; top:-160px; left:-160px; }
-    header:after { background:#0ea5e9; bottom:-180px; right:-140px; }
-    .tagline { font-size:1.05rem; color: var(--text-dim); max-width: 780px; margin: 1rem auto 0; line-height:1.55; }
-    h1 { margin:0; font-size: clamp(2.2rem, 5.5vw, 3.4rem); background: var(--accent-gradient); -webkit-background-clip: text; color: transparent; letter-spacing:-1px; }
-    nav { position:sticky; top:0; z-index:999; backdrop-filter: blur(14px); background: rgba(15,23,42,0.75); border-bottom:1px solid #1e293b; display:flex; justify-content:center; gap:.5rem; padding:.6rem 1rem; flex-wrap:wrap; }
-    nav a { padding:.55rem .9rem; border-radius: var(--radius-sm); font-size:.9rem; font-weight:500; color: var(--text-dim); transition:.25s; }
-    nav a:hover, nav a:focus { background: var(--bg-alt); color: var(--text); outline:none; }
-    nav a.active { background: var(--primary); color:#fff; }
-    main { width:100%; margin: 0 auto; max-width: var(--max-width); padding: 0 1.25rem 4rem; }
+    .tagline {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: var(--text-dim);
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
 
-    section { margin-top: 3.8rem; scroll-margin-top: 90px; }
-    section > h2 { font-size:1.9rem; margin:0 0 1.4rem; letter-spacing:-.5px; position:relative; display:inline-flex; align-items:center; gap:.7rem; }
-    section > h2:after { content:""; height:3px; width:66px; background: var(--accent-gradient); border-radius:4px; display:inline-block; }
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: .6rem;
+      padding: .7rem 1rem;
+      backdrop-filter: blur(12px);
+      background: rgba(10,15,28,0.75);
+      border-bottom: 1px solid #1e293b;
+    }
+    nav a {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      padding: .55rem .9rem;
+      border-radius: 8px;
+      transition: .3s;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      background: var(--primary);
+    }
 
-    .grid { display:grid; gap: 1.6rem; }
-    .grid.projects { grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); }
-    .card { background: var(--bg-alt); border:1px solid #334155; padding:1.15rem 1.15rem 1.35rem; border-radius: var(--radius); position:relative; display:flex; flex-direction:column; gap:.8rem; box-shadow: var(--shadow); transition:.4s; }
-    .card:hover { transform: translateY(-6px); border-color: #475569; }
-    .card h3 { margin:0; font-size:1.15rem; font-weight:600; line-height:1.3; }
-    .meta { font-size:.72rem; letter-spacing:.5px; text-transform:uppercase; color: var(--text-dim); font-weight:600; }
-    .badges { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.2rem; }
-    .badge { font-size:.65rem; padding:.35rem .55rem; background:#1e293b; border:1px solid #334155; border-radius: 999px; letter-spacing:.5px; font-weight:500; color:#cbd5e1; }
-    p { margin:0; }
-    .desc { font-size:.92rem; line-height:1.5; color:#d2dbe7; }
-    .links { margin-top:auto; display:flex; gap:.75rem; flex-wrap:wrap; }
-    .button { --btn-bg: #1e3a8a; background:var(--btn-bg); color:#fff; padding:.55rem .95rem; border-radius: var(--radius-sm); font-size:.78rem; font-weight:600; letter-spacing:.5px; text-transform:uppercase; display:inline-flex; gap:.4rem; align-items:center; border:1px solid #3b82f6; box-shadow:0 2px 4px rgba(0,0,0,.4); transition:.3s; }
-    .button:hover { background:#2563eb; }
+    /* Sections */
+    main { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+    section { margin-top: 4rem; scroll-margin-top: 90px; }
+    section > h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1.6rem;
+      display: inline-block;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-    .two-col { display:grid; gap:2.4rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .desc { font-size: 1rem; color: #cbd5e1; margin-bottom: 1.1rem; }
 
-    .timeline { border-left:2px solid #334155; margin: .5rem 0 0 4px; padding-left:1.2rem; display:flex; flex-direction:column; gap:1.4rem; }
-    .timeline-item { position:relative; }
-    .timeline-item:before { content:""; position:absolute; left:-1.42rem; top:.18rem; width:.85rem; height:.85rem; background: var(--accent-gradient); border-radius:50%; box-shadow:0 0 0 4px #0f172a; }
-    .timeline-item h4 { margin:0 0 .25rem; font-size:1rem; }
-    .timeline-item .period { font-size:.7rem; font-weight:600; letter-spacing:.5px; color: var(--text-dim); text-transform:uppercase; }
+    /* Skills */
+    .skill-chips { display:flex; flex-wrap:wrap; gap:.7rem; }
+    .skill-chips span {
+      padding:.45rem .8rem;
+      font-size:.8rem;
+      background: var(--card);
+      border:1px solid #334155;
+      border-radius: var(--radius);
+      color:#e2e8f0;
+      transition: .3s;
+    }
+    .skill-chips span:hover { background: var(--primary); border-color: var(--primary); }
 
-    .skill-chips { display:flex; flex-wrap:wrap; gap:.6rem; }
-    .skill-chips span { background:#1e293b; border:1px solid #334155; padding:.5rem .75rem; font-size:.75rem; border-radius: var(--radius-sm); font-weight:500; color:#e2e8f0; }
+    /* Card grid (projects etc.) */
+    .grid { display:grid; gap:1.8rem; }
+    .grid.projects { grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); }
+    .card {
+      background: var(--card);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid #334155;
+      box-shadow: var(--shadow);
+      transition: .35s;
+    }
+    .card:hover { transform: translateY(-6px); border-color: var(--primary-light); }
+    .card h3 { font-size:1.15rem; margin-bottom:.5rem; }
 
-    .awards-list, .social-list { display:grid; gap:1rem; }
-    .award, .social { background: var(--bg-alt); padding:1rem 1.1rem 1.15rem; border:1px solid #334155; border-radius: var(--radius-sm); display:flex; flex-direction:column; gap:.35rem; position:relative; }
-    .award h4, .social h4 { margin:0; font-size:.95rem; font-weight:600; }
-    .award .year, .social .role { font-size:.7rem; font-weight:600; letter-spacing:.5px; color: var(--text-dim); text-transform:uppercase; }
+    /* Back to top */
+    .top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: .7rem .9rem;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      font-size: 1.1rem;
+      display: none;
+      transition: .3s;
+    }
+    .top-btn:hover { background: #1d4ed8; }
 
-    .footer { max-width: var(--max-width); margin:0 auto; padding:2.5rem 1.25rem 3.5rem; display:grid; gap:2rem; }
-    .contact-grid { display:grid; gap:1.4rem; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
-    .contact-box { background: var(--bg-alt); padding:1rem 1.15rem; border:1px solid #334155; border-radius: var(--radius); }
-    .contact-box h5 { margin:.2rem 0 .5rem; font-size:.8rem; letter-spacing:.5px; color: var(--text-dim); text-transform:uppercase; }
-    .contact-box a { font-weight:500; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-dim);
+      font-size: .85rem;
+      border-top: 1px solid #1e293b;
+    }
 
-    .top-btn { position:fixed; bottom:18px; right:18px; background: var(--primary); color:#fff; padding:.7rem .85rem; border-radius: 50%; border:none; cursor:pointer; box-shadow: var(--shadow); font-size:1rem; display:none; }
-    .top-btn:hover { background:#1d4ed8; }
-
-    @media (max-width:600px){
-      header { padding: 3.2rem 1.1rem 2.4rem; }
-      nav { gap:.25rem; }
-      .card { padding:1rem 1rem 1.2rem; }
-      .grid.projects { grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); }
+    @media (max-width:600px) {
+      header { padding: 3.2rem 1rem 2.4rem; }
+      .tagline { font-size: .95rem; }
     }
   </style>
 </head>
@@ -125,8 +189,8 @@
       <h2>About</h2>
       <div class="two-col">
         <div>
-          <p class="desc">I am a third-year Biomedical Engineering undergraduate at the Department of Electronic & Telecommunication Engineering, University of Moratuwa. I focus on applying mathematics, biosignal processing, and machine learning to build accessible medical technologies. My experience spans analog & embedded hardware, algorithm design, and user-centered interfaces across collaborative team projects.</p>
-          <p class="desc">I am motivated by translational impact: reducing barriers to diagnostics and monitoring through intelligent, low-cost, and portable systems. I continuously explore pathways that merge rigorous analysis with practical prototyping for real-world clinical contexts.</p>
+          <p class="desc">I am a third-year Biomedical Engineering undergraduate at the Department of Electronic & Telecommunication Engineering, University of Moratuwa. My focus lies in biosignal processing, medical imaging, machine learning, and human-centered medical device design.</p>
+          <p class="desc">I am driven by the mission of reducing barriers to diagnostics and monitoring through intelligent, low-cost, and portable systems. My passion for volunteering and writing complements my technical journey, enabling me to share knowledge and inspire communities.</p>
         </div>
         <div>
           <div class="skill-chips">
@@ -145,27 +209,26 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="skill-chips">
-        <span>Python</span><span>C++</span><span>Dart</span><span>MATLAB</span><span>Verilog HDL</span>
-        <span>TensorFlow</span><span>NumPy</span><span>Flutter</span><span>SolidWorks</span><span>Altium Designer</span>
-        <span>LT Spice</span><span>Proteus</span><span>Quartus</span><span>LaTeX</span><span>Git / GitHub</span>
-        <span>Arduino / ESP32</span><span>Raspberry Pi</span><span>Jupyter</span>
+        <span>Python</span><span>C++</span><span>Dart</span><span>MATLAB</span><span>TensorFlow</span>
+        <span>Flutter</span><span>OpenCV</span><span>SolidWorks</span><span>Altium</span><span>LTSpice</span>
+        <span>Proteus</span><span>LaTeX</span><span>Git / GitHub</span><span>Arduino / ESP32</span><span>Raspberry Pi</span>
       </div>
     </section>
 
-    <!-- Projects, Education, Engagements, Awards, Contact remain the same as in your CV-based structure -->
+    <!-- Add more sections like Projects, Education, Engagements, Awards, Contact -->
 
   </main>
 
   <button id="topBtn" class="top-btn" aria-label="Back to top">↑</button>
 
-  <footer class="footer">
-    <p style="text-align:center; color:var(--text-dim); font-size:.8rem;">© 2025 Sanugi Dilara Wickramasinghe • Last updated September 2025</p>
+  <footer>
+    © 2025 Sanugi Dilara Wickramasinghe • Last updated September 2025
   </footer>
 
   <script>
-    // Scroll spy + active nav highlight
     const sections = document.querySelectorAll('main section');
     const navLinks = document.querySelectorAll('nav a');
+    const topBtn = document.getElementById('topBtn');
 
     function onScroll() {
       const scrollPos = window.scrollY + 120;
@@ -176,14 +239,12 @@
           if (active) active.classList.add('active');
         }
       });
-      document.getElementById('topBtn').style.display = window.scrollY > 300 ? 'block' : 'none';
+      topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
     }
     window.addEventListener('scroll', onScroll);
     onScroll();
 
-    // Back to top
-    document.getElementById('topBtn').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
   </script>
 </body>
 </html>
-
