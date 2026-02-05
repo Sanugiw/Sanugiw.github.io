@@ -41,10 +41,7 @@ html {
 
 body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(59,130,246,.14), transparent 55%),
-    radial-gradient(circle at 85% 70%, rgba(34,211,238,.12), transparent 55%),
-    linear-gradient(180deg, var(--bg-alt), var(--bg));
+  background: var(--bg);
   color: var(--text);
   line-height: 1.65;
 }
