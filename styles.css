@@ -64,23 +64,27 @@ a:hover {
 /* Header */
 header {
   text-align: center;
-  padding: 5rem 1rem 4rem;
+  padding: 7rem 1.5rem 5rem;
+  background: var(--gradient-bg);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
-  font-size: clamp(2.6rem, 6vw, 3.4rem);
+  font-size: clamp(3.5rem, 8vw, 4.5rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   background: linear-gradient(135deg, #60a5fa, #22d3ee);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .tagline {
   color: var(--text-dim);
-  margin-top: 1.1rem;
-  font-size: 1.05rem;
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
   max-width: 760px;
   margin-inline: auto;
 }
@@ -96,8 +100,10 @@ nav {
   display: flex;
   justify-content: center;
   gap: .9rem;
-  padding: .8rem 1rem;
+  padding: 1.2rem 2rem;
   border-bottom: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
@@ -105,6 +111,7 @@ nav a {
   border-radius: var(--radius-sm);
   color: var(--text-dim);
   font-size: .9rem;
+  font-weight: 500;
   transition: background .3s ease, color .3s ease, box-shadow .3s ease;
 }
 
@@ -146,17 +153,19 @@ section h2 {
 /* Cards */
 .card {
   background:
-    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)),
     var(--card-glass);
   padding: 1.6rem;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-14px) scale(1.08);
   border-color: var(--primary);
   box-shadow:
     0 0 0 1px rgba(59,130,246,.25),
@@ -164,9 +173,9 @@ section h2 {
 }
 
 .card h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   margin-bottom: .45rem;
-  color: #dbeafe;
+  color: #e0f2fe;
 }
 
 .desc {
@@ -186,23 +195,26 @@ section h2 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.3rem;
+  padding: 1.5rem;
   background:
     linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)),
     var(--card-glass);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   color: var(--text);
-  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
 }
 
 .contact-box span {
-  font-size: 1.45rem;
-  color: var(--accent);
+  font-size: 1.6rem;
+  color: var(--highlight-hover);
 }
 
 .contact-box:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow:
     0 0 0 1px var(--accent-soft),
@@ -212,11 +224,11 @@ section h2 {
 /* Footer */
 footer {
   text-align: center;
-  padding: 2.5rem 1rem;
-  color: var(--text-dim);
-  font-size: .85rem;
-  border-top: 1px solid var(--border);
-  background: linear-gradient(180deg, transparent, rgba(15,23,42,.4));
+  padding: 3.5rem 2rem;
+  background: var(--gradient-bg);
+  color: #fff;
+  font-size: 0.95rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
@@ -232,4 +244,11 @@ footer {
   nav {
     flex-wrap: wrap;
   }
+}
+
+/* Enhanced styles for a more visually appealing design */
+:root {
+  --highlight-hover: #fde047;
+  --transition-fast: all 0.2s ease-in-out;
+  --gradient-bg: linear-gradient(135deg, #3b82f6, #22d3ee);
 }
