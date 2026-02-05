@@ -31,18 +31,6 @@ The website is deployed on **GitHub Pages**. Visit it here:
 
 ---
 
-## Repository Structure
-
-```plaintext
-.
-├── index.html          # Main portfolio file
-├── images/             # Project and profile images
-├── README.md           # Documentation
-└── (Optional CSS/JS files)
-```
-
----
-
 ## Contact
 
 - **Email:** [sanugidwickramasinghe@gmail.com](mailto:sanugidwickramasinghe@gmail.com)  
