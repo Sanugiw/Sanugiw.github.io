@@ -147,30 +147,37 @@ section h2 {
   gap: 2rem;
 }
 
+/* Honors Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Reduced size */
+  gap: 1.5rem; /* Adjusted spacing */
+}
+
 /* Cards */
 .card {
   background: var(--card);
-  padding: 2rem;
+  padding: 1.5rem; /* Reduced padding */
   border-radius: var(--radius);
   border: 1px solid var(--primary);
   cursor: pointer;
   transition:
     transform 0.3s ease,
     border-color 0.3s ease;
-  min-height: 320px;
+  min-height: 200px; /* Reduced height */
   display: flex;
   flex-direction: column;
   overflow: visible; /* Fix overflow */
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: var(--primary-strong);
 }
 
 .card h3 {
-  font-size: 1.1rem;
-  margin-bottom: .6rem;
+  font-size: 1rem; /* Reduced font size */
+  margin-bottom: .5rem;
   color: var(--primary);
   white-space: normal;
 }
@@ -189,10 +196,9 @@ section h2 {
 
 .desc {
   color: var(--text-dim);
-  margin-top: .6rem;
+  margin-top: .5rem;
   font-size: .85rem;
-  line-height: 1.6;
-  flex-grow: 1;
+  line-height: 1.5;
 }
 
 .project-meta {
