@@ -155,7 +155,7 @@ section h2 {
   background: var(--card);
   padding: 2rem;
   border-radius: var(--radius);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--primary);
   cursor: pointer;
   transition:
     transform 0.3s ease,
@@ -163,17 +163,18 @@ section h2 {
   min-height: 320px;
   display: flex;
   flex-direction: column;
+  overflow: visible; /* Fix overflow */
 }
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: rgba(59, 130, 246, 0.6);
+  border-color: var(--primary-strong);
 }
 
 .card h3 {
   font-size: 1.1rem;
   margin-bottom: .6rem;
-  color: var(--accent);
+  color: var(--primary);
   white-space: normal;
 }
 
@@ -186,7 +187,7 @@ section h2 {
 }
 
 .card a:hover h3 {
-  color: #7dd3fc;
+  color: var(--accent);
 }
 
 .desc {
@@ -200,7 +201,7 @@ section h2 {
 .project-meta {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  border-top: 1px solid var(--primary-soft);
 }
 
 .project-meta p {
