@@ -87,6 +87,7 @@ Sanugiw.github.io/
 ├── honors.html         # Honors and awards page
 ├── style.css           # Global styles and dark theme
 ├── README.md           # Project documentation (this file)
+├── LICENSE             # MIT License file
 └── .git/               # Git version control directory
 ```
 
