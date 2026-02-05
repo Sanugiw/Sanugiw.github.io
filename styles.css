@@ -62,7 +62,7 @@ a:hover {
 header {
   text-align: center;
   padding: 7rem 1.5rem 5rem;
-  background: var(--gradient-bg);
+  background: var(--bg); /* Changed from gradient to solid background */
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -71,10 +71,7 @@ header h1 {
   font-size: clamp(3.5rem, 8vw, 4.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #60a5fa, #22d3ee);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--primary); /* Removed gradient text */
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
